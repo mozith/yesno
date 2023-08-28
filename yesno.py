@@ -10,7 +10,7 @@ def no():
     quit()
 
 def motionMouse(event):
-    btnYes.place(x=random.randint(0, 500), y=random.randint(0, 500))
+    buttonYes.place(x=random.randint(0, 500), y=random.randint(0, 500))
 
 root = Tk()
 root.geometry('600x600')
@@ -19,9 +19,9 @@ root.resizable(width=False, height=False)
 root['bg'] = 'black'
 
 label = Label(root, text='Are you gay?', font='Arial 20 bold', bg='black').pack()
-btnYes = Button(root, text='No', font='Arial 20 bold')
-btnYes.place(x=170, y=100)
-btnYes.bind('<Enter>', motionMouse)
-btnNo = Button(root, text='Yes', font='Arial 20 bold', command=no).place(x=350, y=100)
+buttonYes = Button(root, text='No', font='Arial 20 bold')
+buttonYes.place(x=170, y=100)
+buttonYes.bind('<Enter>', motionMouse)
+buttonNo = Button(root, text='Yes', font='Arial 20 bold', command=no).place(x=350, y=100)
 
 root.mainloop()
